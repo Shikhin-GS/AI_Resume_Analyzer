@@ -1,4 +1,4 @@
-# 📄 AI Resume Analyzer
+# AI Resume Analyzer
 
 AI-powered ATS Resume Analyzer built using Python and Streamlit for resume parsing, job description matching, ATS analysis, missing skill detection, and resume improvement suggestions.
 
@@ -27,14 +27,14 @@ AI-powered ATS Resume Analyzer built using Python and Streamlit for resume parsi
 
 ---
 
-## 📂 Supported File Formats
+## Supported File Formats
 
 - PDF
 - DOCX
 
 ---
 
-## ▶️ Run Project Locally
+## Run Project Locally
 
 ### 1. Clone Repository
 
@@ -66,7 +66,7 @@ streamlit run app.py
 
 ---
 
-## 📸 Project Overview
+## Project Overview
 
 This application helps users:
 
