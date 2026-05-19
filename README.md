@@ -77,6 +77,6 @@ This application helps users:
 
 ---
 
-## 👨‍💻 Developed By
+## Developed By
 
 Shikhin G S
