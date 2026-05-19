@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from google import genai
 from PyPDF2 import PdfReader
@@ -19,7 +20,7 @@ st.set_page_config(
 # -----------------------------
 
 client = genai.Client(
-    api_key="AIzaSyCPM3EZ8JcQ2vcmTQ9_dLQo72f1vQWzAZI"
+    api_key=os.getenv("GEMINI_API_KEY")
 )
 
 # -----------------------------
@@ -244,7 +245,7 @@ if st.button("Analyze Resume"):
 
         except Exception as e:
 
-            st.error(f"Error: {str(e)}")
+              st.error("Server is busy right now. Please try again in a few seconds.")
 
     else:
 
