@@ -183,11 +183,9 @@ if st.button("Analyze Resume"):
         try:
 
             with st.spinner("Analyzing Resume..."):
-
-               model = genai.GenerativeModel("gemini-1.5-flash")
-
-               response = model.generate_content(prompt)
-
+                
+                model = genai.GenerativeModel("gemini-1.5-flash")
+                response = model.generate_content(prompt)
                 result = response.text
 
             # -----------------------------
