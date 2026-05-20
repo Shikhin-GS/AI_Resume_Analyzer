@@ -242,7 +242,7 @@ if st.button("Analyze Resume"):
 
         except Exception as e:
 
-                st.error(f"Error: {str(e)}")
+                st.error("Server is busy right now. Please try again in a few seconds.")
 
     else:
 
