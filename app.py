@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from google import genai
+import google.generativeai as genai
 from PyPDF2 import PdfReader
 from docx import Document
 import re
@@ -19,7 +19,7 @@ st.set_page_config(
 # GEMINI API CONFIGURATION
 # -----------------------------
 
-client = genai.Client(
+genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
@@ -184,10 +184,9 @@ if st.button("Analyze Resume"):
 
             with st.spinner("Analyzing Resume..."):
 
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash",
-                    contents=prompt
-                )
+               model = genai.GenerativeModel("gemini-1.5-flash")
+
+               response = model.generate_content(prompt)
 
                 result = response.text
 
